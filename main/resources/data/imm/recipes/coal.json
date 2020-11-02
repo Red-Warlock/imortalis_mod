@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "imm:test_block"
+  },
+  "result": "minecraft:coal",
+  "experience": 0.0,
+  "cookingtime": 200
+}
