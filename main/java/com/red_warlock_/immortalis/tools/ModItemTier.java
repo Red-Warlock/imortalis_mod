@@ -1,40 +1,62 @@
 package com.red_warlock_.immortalis.tools;
 
+import com.red_warlock_.immortalis.util.RegistryHandler;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
+
+import java.util.function.Supplier;
 
 public enum ModItemTier implements IItemTier {
 
     //harvest tier, max uses, efficiency, base damage, enchantability, repair material
-    RUBY(3, 800, 7.0f, 0, 12, repairMaterial);
+    RUBY(3, 800, 7.0f, 0, 12, () -> {
+        return Ingredient.fromItems(RegistryHandler.TEST_ITEM.get());
+    });
+
+    private final int harvestLevel;
+    private final int maxUses;
+    private final float efficiency;
+    private final float attackDamage;
+    private final int enchantability;
+    private final Supplier<Ingredient> repairMaterial;
+
+    ModItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
+        this.harvestLevel = harvestLevel;
+        this.maxUses = maxUses;
+        this.efficiency = efficiency;
+        this.attackDamage = attackDamage;
+        this.enchantability = enchantability;
+        this.repairMaterial = repairMaterial;
+    }
+
 
     @Override
     public int getMaxUses() {
-        return 0;
+        return maxUses;
     }
 
     @Override
     public float getEfficiency() {
-        return 0;
+        return efficiency;
     }
 
     @Override
     public float getAttackDamage() {
-        return 0;
+        return attackDamage;
     }
 
     @Override
     public int getHarvestLevel() {
-        return 0;
+        return harvestLevel;
     }
 
     @Override
     public int getEnchantability() {
-        return 0;
+        return enchantability;
     }
 
     @Override
     public Ingredient getRepairMaterial() {
-        return null;
+        return repairMaterial.get();
     }
 }

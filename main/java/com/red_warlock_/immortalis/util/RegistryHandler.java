@@ -5,8 +5,10 @@ import com.red_warlock_.immortalis.blocks.BlockBase;
 import com.red_warlock_.immortalis.blocks.TestBlock;
 import com.red_warlock_.immortalis.items.BlockItemBase;
 import com.red_warlock_.immortalis.items.ItemBase;
+import com.red_warlock_.immortalis.tools.ModItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -31,6 +33,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TEST_BLOCK_ITEM = ITEMS.register("test_block", () -> new BlockItemBase(TEST_BLOCK.get()));
 
     //TOOLS
+    public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () ->
+            new SwordItem(ModItemTier.RUBY, 5, -2.4f, new Item.Properties().group(ImmortalisMod.TAB)));
 
 
 }
