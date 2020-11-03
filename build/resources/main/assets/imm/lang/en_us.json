@@ -13,8 +13,10 @@
 
   "item.imm.ruby_helmet": "Ruby Helmet",
   "item.imm.ruby_chestplate": "Ruby Chestplate",
-  "item.imm.ruby_leggins": "Ruby Leggings",
-  "item.imm.ruby_boots": "Ruby Boots"
+  "item.imm.ruby_leggings": "Ruby Leggings",
+  "item.imm.ruby_boots": "Ruby Boots",
+
+  "item.imm.poison_apple": "Poison Apple"
 
 
 }
