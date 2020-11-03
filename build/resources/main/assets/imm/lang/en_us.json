@@ -1,0 +1,20 @@
+{
+  "itemGroup.ImmortalisTab": "Immortalis",
+  "item.imm.test_item": "Test Item",
+  "block.imm.test_block": "Test Block",
+  "block.imm.block_2": "Block 2",
+
+
+  "item.imm.ruby_sword": "Ruby Sword",
+  "item.imm.ruby_pickaxe": "Ruby Pickaxe",
+  "item.imm.ruby_shovel": "Ruby Shovel",
+  "item.imm.ruby_axe": "Ruby Axe",
+
+
+  "item.imm.ruby_helmet": "Ruby Helmet",
+  "item.imm.ruby_chestplate": "Ruby Chestplate",
+  "item.imm.ruby_leggins": "Ruby Leggings",
+  "item.imm.ruby_boots": "Ruby Boots"
+
+
+}
