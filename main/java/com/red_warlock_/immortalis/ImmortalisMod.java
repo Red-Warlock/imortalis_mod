@@ -1,7 +1,9 @@
 package com.red_warlock_.immortalis;
 
-import com.red_warlock_.immortalis.util.RegistryHandler;
-import net.minecraft.item.Item;
+import com.red_warlock_.immortalis.init.ModArmors;
+import com.red_warlock_.immortalis.init.ModBlocks;
+import com.red_warlock_.immortalis.init.ModItems;
+import com.red_warlock_.immortalis.init.ModTools;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,9 +27,14 @@ public class ImmortalisMod
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        RegistryHandler.init();
-
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModTools.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModArmors.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -43,7 +50,7 @@ public class ImmortalisMod
     public static final ItemGroup TAB = new ItemGroup("ImmortalisTab") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.TEST_ITEM.get());
+            return new ItemStack(ModItems.TEST_ITEM.get());
         }
     };
 }
