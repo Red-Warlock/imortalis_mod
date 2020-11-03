@@ -10,14 +10,14 @@ modId="imm" #mandatory
 version="1.6.3-1.0.0" #mandatory
 displayName="Immortalis" #mandatory
 updateJSONURL="http://myurl.me/" #optional
-displayURL="http://example.com/" #optional
+displayURL="https://github.com/Red-Warlock/imortalis_mod" #optional
 logoFile="examplemod.png" #optional
 credits="Technovision for the tutorials on youtube" #optional
 # A text field displayed in the mod UI
 authors="Red_Warlock_" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-This is a description
+"It's gonna get weird!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.examplemod]] #optional

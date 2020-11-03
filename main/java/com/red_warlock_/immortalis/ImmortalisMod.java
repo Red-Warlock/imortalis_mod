@@ -17,7 +17,7 @@ import org.apache.logging.log4j.Logger;
 @Mod("imm")
 public class ImmortalisMod
 {
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public static final String MOD_ID = "imm";
 

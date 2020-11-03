@@ -6,6 +6,7 @@ import com.red_warlock_.immortalis.blocks.BlockBase;
 import com.red_warlock_.immortalis.blocks.TestBlock;
 import com.red_warlock_.immortalis.items.BlockItemBase;
 import com.red_warlock_.immortalis.items.ItemBase;
+import com.red_warlock_.immortalis.items.PoisonApple;
 import com.red_warlock_.immortalis.tools.ModItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -26,6 +27,9 @@ public class RegistryHandler {
 
     //ITEMS
     public static final RegistryObject<Item> TEST_ITEM = ITEMS.register("test_item", ItemBase::new);
+
+    //FOODS
+    public static final RegistryObject<PoisonApple> POISON_APPLE = ITEMS.register("poison_apple", PoisonApple::new);
 
     //BLOCKS
     public static final RegistryObject<Block> TEST_BLOCK = BLOCKS.register("test_block", TestBlock::new);
